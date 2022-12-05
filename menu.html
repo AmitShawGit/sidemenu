@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <style>
+    *{
+        box-sizing:border-box;
+    }
+    html, body{
+        overflow-x: hidden;
+        height: 100%;
+    }
+    .header{
+        background-color: brown;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        z-index: 10;
+    }
+    .main{
+        height: 100%;
+        margin-top: 60px;
+        padding:10px 50px ;
+    }
+    .sidebarmenu{
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        padding-top: 60px;
+        background-color: rgb(7, 168, 255);
+        transform: translateX(-250px);
+        transition: transform 400ms ease-in-out;
+    }
+
+    #openSidebarMenu:checked ~ .sidebarmenu{
+        transform: translateX(0px);
+    }
+
+    .menu{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu li{
+        color: aliceblue;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+    .menu li a{
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        display: block;
+    }
+   .sidebarIconToggle{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    z-index: 20;
+    top: 22px;
+    left: 15px;
+    cursor: pointer;
+   }
+
+  .spinner{
+    height: 3px;
+    background-color: rgb(98, 34, 34);
+    transition: all 0.3s;
+   
+  }
+.spinner.middle
+.spinner.bottom{
+    margin-top: 15px;
+}
+
+
+   </style>
+</head>
+<body>
+  
+
+    <!--sidebar1-->
+    <div class="header"></div>
+    <input type="checkbox"  id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle" >
+        <i class="bi bi-list" style="color:white; font-size: 25px;"></i>
+    </label>
+    <div class="sidebarmenu">
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Vision</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">ContactUs</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Pure CSS sidebar toggle menu</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque ad eius obcaecati deserunt illum pariatur modi dolorum quidem minus sapiente aliquid quaerat, consequatur veniam facere eos enim aperiam iste quisquam sint, exercitationem eligendi, quae suscipit officiis fuga. Repellat laboriosam deleniti perspiciatis recusandae, id dignissimos sit labore, ipsam facere similique nesciunt neque a maxime eius? Ducimus illo est culpa. Odio facere fugit enim, sequi quasi voluptas sunt atque beatae praesentium! Voluptatum reprehenderit sapiente sequi rerum impedit, adipisci cumque saepe similique atque, numquam molestiae quidem quod id eum? Quasi cumque dignissimos autem earum. Nam atque, doloribus incidunt iste debitis quisquam eaque dolores commodi nulla provident neque dolore sunt mollitia minus nostrum impedit minima ipsam vel quis? Adipisci officiis ipsum atque dicta voluptates dolores officia temporibus facere itaque. Ipsa totam vero, saepe, error officia animi natus distinctio optio id explicabo omnis ut sunt voluptatibus quo nulla adipisci fugit veritatis in nobis! Non soluta sapiente dignissimos fugit voluptatibus quam explicabo corporis quibusdam deleniti aperiam, ipsa laborum nostrum facere illum delectus accusantium ducimus voluptates est atque culpa quidem ratione tempore. Quo dolorem voluptatum odit labore delectus quibusdam facilis quaerat et saepe aut, amet expedita culpa illum maxime sint quod impedit temporibus debitis neque aliquam aperiam sequi deserunt. Maiores, recusandae explicabo? Minima asperiores fugit officiis beatae tenetur, enim quos reiciendis nisi fuga, praesentium sed, recusandae maxime non totam quaerat quam porro deserunt mollitia quasi a soluta nobis magni! Cum est quaerat dicta id fuga iusto, corrupti, delectus, earum quidem facere modi saepe et cupiditate cumque. Necessitatibus commodi, impedit facere, tempora quia inventore sit magnam quae officia itaque eaque omnis, ipsam veniam nemo nam voluptatem adipisci corrupti minima aperiam nulla neque atque sed nihil! Ad enim, unde eius, exercitationem fuga pariatur perferendis, corporis quaerat minus qui modi deleniti illum impedit repellat eaque temporibus dignissimos repellendus dicta consequatur rem! Consequatur eius aliquam corrupti eum! Dolores dolore beatae est unde corrupti debitis omnis dignissimos quaerat vitae sint ipsa deserunt reprehenderit nesciunt quae sit similique, dolor voluptatibus totam consequuntur magnam ratione obcaecati! Necessitatibus voluptates accusamus sapiente nobis repellat hic et rerum nisi explicabo aperiam, numquam ex? Quod unde, debitis non eaque in ipsam porro laudantium dolorem sed suscipit iure omnis exercitationem praesentium, minima atque modi explicabo fuga sint! Rerum soluta accusamus impedit commodi quia! Accusamus cumque consectetur dolor tempora autem obcaecati doloremque reprehenderit consequatur quasi odit ut vitae voluptatem ab iste, alias, veniam minima unde pariatur similique ipsa, assumenda corrupti. Ipsam delectus ut pariatur quidem mollitia veniam, officiis distinctio voluptates quisquam vel quaerat maiores, rem provident? Consectetur earum modi velit id, doloribus vitae esse optio dolore, atque quam ducimus fugit, accusantium vel minus quae accusamus expedita minima eveniet unde distinctio. Accusantium nesciunt odit tempora repudiandae obcaecati reiciendis, unde velit eligendi, placeat explicabo ipsum recusandae sequi nostrum consequatur odio corrupti cupiditate natus dicta architecto totam iusto! Dicta optio fugit, voluptatum ipsa suscipit exercitationem cupiditate architecto hic veritatis neque quibusdam necessitatibus ullam inventore, tempora accusamus quaerat consequuntur repellat minima. Sit sed, quas veniam, numquam blanditiis, fugit ea sequi ullam accusantium eligendi quibusdam.</p>
+    </div>
+</body>
+</html>
